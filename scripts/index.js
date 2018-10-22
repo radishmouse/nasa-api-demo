@@ -43,7 +43,7 @@ function cacheResults(asteroidData) {
 
 function pullResultsFromCache() {
     // 1. Grab the string data from localStorage
-    let cachedResults = localStorage.getItem('asteroids');
+    let cachedResults = localStorage.getItem('asteroids') || "{}";
     // 2. Convert the string to JavaScript data (object or array, etc.)
     let convertedResults = JSON.parse(cachedResults);
     // 3. Return my data
